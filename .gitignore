@@ -1,0 +1,16 @@
+*/*
+!.gitginore
+
+#util
+!util/*.h
+
+# basic
+!basic/*.c
+!basic/*.cpp
+!basic/Makefile
+
+# socket
+!socket
+!socket/*.c
+!socket/Makefile
+
