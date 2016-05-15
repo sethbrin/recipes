@@ -28,10 +28,32 @@ struct Four {
   char ch;
 }; // 4 + 4(padding) + 16 + 1 = 25 + 7 = 32
 
+struct Five {
+  short c;
+  union {
+    int a;
+    short b;
+  } u;
+  double d;
+}; // 2 + 2(padding) + 4 + 8=16
+
+struct Six {
+  short s;
+  union {
+    char c;
+    short s;
+  } u;
+  double d;
+}; // 2 + 2 + 4(padding) + 8 =16
+
+
 
 int main()
 {
   // 16:24:24:32
   cout << sizeof(struct One) << ":" << sizeof(struct Two) << ":" << sizeof(struct Three) << ":" << sizeof(struct Four)<< endl;
+
+  // 16
+  cout << sizeof(struct Five) << endl;
 }
 
