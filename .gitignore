@@ -17,3 +17,8 @@
 # lua
 !lua
 !lua/*.lua
+
+# jni
+!jni
+!jni/*.java
+!jni/*.cpp
