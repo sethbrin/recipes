@@ -5,9 +5,12 @@
 
 
 JNIEXPORT void JNICALL Java_Hello_display
-  (JNIEnv *, jobject)
+  (JNIEnv *env, jobject obj)
 {
-  printf("Hello world zengping!\n");
+  jclass cls = env->GetObjectClass(obj);
+  jfieldID fid = env->GetFieldID(cls, "a", "D");
+  jdouble a = env->GetDoubleField(obj, fid);
+  printf("Hello world zengping!a:%lf\n", a);
   return;
 }
 
